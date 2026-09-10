@@ -2,13 +2,91 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="0; url=https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbwu62X5vI3LTWf25aDgj1Sfcyh7u24_kAIU4rb4XoLZVKrVUVNv3DmG9TllnuOqEcp0bA/exec">
     <title>SADAE - Cargando...</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e0e0e0;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 0.9s linear infinite;
+            margin: 0 auto 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            color: #111111;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: #666666;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <p style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
-        Cargando aplicación... Si no eres redirigido automáticamente, 
-        <a href="https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbwu62X5vI3LTWf25aDgj1Sfcyh7u24_kAIU4rb4XoLZVKrVUVNv3DmG9TllnuOqEcp0bA/exec">haz clic aquí</a>.
-    </p>
+    <div class="card">
+        <div class="spinner"></div>
+        <h1>Cargando SADAE</h1>
+        <p>
+            Redirigiendo a la aplicación...<br>
+            Si no eres redirigido automáticamente, <a href="https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbwu62X5vI3LTWf25aDgj1Sfcyh7u24_kAIU4rb4XoLZVKrVUVNv3DmG9TllnuOqEcp0bA/exec">haz clic aquí</a>.
+        </p>
+    </div>
+
+    <script>
+        // Respaldo de redirección inmediata por JS si la etiqueta meta se bloquea o retrasa
+        window.location.href = "https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbwu62X5vI3LTWf25aDgj1Sfcyh7u24_kAIU4rb4XoLZVKrVUVNv3DmG9TllnuOqEcp0bA/exec";
+    </script>
 </body>
 </html>
