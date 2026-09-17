@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbyzTSo8oGKQolxrlicLlf1kX_E7yf-kZmONAmEu7Ick70a5NJTPGxClfQcA1XarPYUwwg/exec">
+    <meta name="robots" content="noindex, nofollow">
     <title>SADAE - Cargando...</title>
+
+    <!-- Redirección por HTML como respaldo secundario -->
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbyzTSo8oGKQolxrlicLlf1kX_E7yf-kZmONAmEu7Ick70a5NJTPGxClfQcA1XarPYUwwg/exec">
+
     <style>
         :root {
             --primary-color: #1a73e8;
             --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
             --text-color: #333333;
+            --text-muted: #666666;
+            --spinner-border: #e0e0e0;
+        }
+
+        /* Soporte para modo oscuro del sistema */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #8ab4f8;
+                --bg-color: #121212;
+                --card-bg: #1e1e1e;
+                --text-color: #e8eaed;
+                --text-muted: #9aa0a6;
+                --spinner-border: #3c4043;
+            }
         }
 
         body {
@@ -26,10 +45,10 @@
         }
 
         .card {
-            background: #ffffff;
+            background: var(--card-bg);
             padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
             max-width: 400px;
             width: 100%;
@@ -38,10 +57,10 @@
         .spinner {
             width: 40px;
             height: 40px;
-            border: 4px solid #e0e0e0;
+            border: 4px solid var(--spinner-border);
             border-top: 4px solid var(--primary-color);
             border-radius: 50%;
-            animation: spin 0.9s linear infinite;
+            animation: spin 0.8s linear infinite;
             margin: 0 auto 20px auto;
         }
 
@@ -51,14 +70,14 @@
         }
 
         h1 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin: 0 0 10px 0;
-            color: #111111;
+            color: var(--text-color);
         }
 
         p {
             font-size: 0.95rem;
-            color: #666666;
+            color: var(--text-muted);
             margin: 0;
             line-height: 1.5;
         }
@@ -75,17 +94,19 @@
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="spinner"></div>
+    <div class="card" role="main">
+        <div class="spinner" role="status" aria-label="Cargando"></div>
         <h1>Cargando SADAE</h1>
         <p>
             Redirigiendo a la aplicación...<br>
-            Si no eres redirigido automáticamente, <a href="https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbyzTSo8oGKQolxrlicLlf1kX_E7yf-kZmONAmEu7Ick70a5NJTPGxClfQcA1XarPYUwwg/exec">haz clic aquí</a>.
+            Si no eres redirigido automáticamente, <a id="redirect-link" href="https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbyzTSo8oGKQolxrlicLlf1kX_E7yf-kZmONAmEu7Ick70a5NJTPGxClfQcA1XarPYUwwg/exec">haz clic aquí</a>.
         </p>
     </div>
 
     <script>
-        window.location.href = "https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbyzTSo8oGKQolxrlicLlf1kX_E7yf-kZmONAmEu7Ick70a5NJTPGxClfQcA1XarPYUwwg/exec";
+        // Uso de location.replace para prevenir bucles en el botón "Atrás" del navegador
+        const targetUrl = "https://script.google.com/a/macros/cetis42.edu.mx/s/AKfycbyzTSo8oGKQolxrlicLlf1kX_E7yf-kZmONAmEu7Ick70a5NJTPGxClfQcA1XarPYUwwg/exec";
+        window.location.replace(targetUrl);
     </script>
 </body>
 </html>
